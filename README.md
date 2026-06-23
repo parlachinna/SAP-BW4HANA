@@ -278,22 +278,40 @@ mm   = v_date+4(2)	04
 DD = V_Date + 6(2)	26
 
 Data : V_date1 type D.
+
 CONCATENATE yyyy mm '01' INTO v_date1.
 
 Range Logic
+
 l_s_range-sign = Include(I),Exclude (E)
+
 l_s_range-opt = Between(BT) , Equal (EQ)
 
+
 l_s_range-low = v_date1
+
 l_s_range-high = sy-datum.
+
 APPEND l_s_range TO l_t_range.
+
 LOW	From Date
+
 HIGH	To Date
 
+
+
 I_STEP Values in Customer Exit
+
+
 I_STEP = 0:Used for Authorization. 
+
+
 I_STEP = 1:It will be executed before the variable popup 
+
+
 I_STEP = 2:It will be executed after the variable popup 
+
+
 I_STEP = 3: Error Handling
 
 
