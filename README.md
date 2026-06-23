@@ -184,15 +184,27 @@ Validate against source tables
 
 Transport changes through landscape
 
+
 **Debug of all ABAP code**:
+
 If we want to debug any type of routine in the transformation
+
 1)simply open the transfomration
+
 2)goto extras menu bar we will find the one option like display generated program
+
 3)once click on the disply generated program it will take you to the ABAP entire code and just search for your code (ctrl + F).
+
 4)Place break point at select statement, loop statement and after read statement if sy-subrc nearly 
+
 5)execute the F5 so that it will execute the line by line.
+
 6)carefully check the internal table filling or not in the select statement level
+
 7)Once read statement success then we will get sy-subrc eq 0 then value will updating to enhacned fields.
+
+
+
 
 
 
@@ -206,6 +218,8 @@ F6 means it will go inside of method or function module
 F7 means it will come out of the method or function module
 
 F8 means it will execute the entire code and it will come out of the program.
+
+
 
 
 
