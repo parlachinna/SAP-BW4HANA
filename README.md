@@ -226,6 +226,55 @@ F8 means it will execute the entire code and it will come out of the program.
 
 
 
+**What is Customer Exit in SAP BW?**
+
+A Customer Exit Variable is used to derive dynamic values at runtime in BW reports using ABAP code.
+
+Real-Time Business Scenarios
+1. MTD – Month-To-Date
+Requirement:
+Business wants:
+1st day of current month → Till today
+Example:
+If today is 20.04.2026
+Then range should be 20260401 → 20260420
+Declaration:
+DATA: v_date TYPE d.
+V_DATE TYPE SY-DATUM.
+v_date = sy-datum.
+
+
+DD type Numc(2)
+MM type Numc(2)
+YYYY type Numc(4)
+
+yyyy = v_date+0(4)	2026
+mm   = v_date+4(2)	04
+DD = V_Date + 6(2)	26
+
+Data : V_date1 type D.
+CONCATENATE yyyy mm '01' INTO v_date1.
+
+Range Logic
+l_s_range-sign = Include(I),Exclude (E)
+l_s_range-opt = Between(BT) , Equal (EQ)
+
+l_s_range-low = v_date1
+l_s_range-high = sy-datum.
+APPEND l_s_range TO l_t_range.
+LOW	From Date
+HIGH	To Date
+
+I_STEP Values in Customer Exit
+I_STEP = 0:Used for Authorization. 
+I_STEP = 1:It will be executed before the variable popup 
+I_STEP = 2:It will be executed after the variable popup 
+I_STEP = 3: Error Handling
+
+
+
+
+
 
 
 
