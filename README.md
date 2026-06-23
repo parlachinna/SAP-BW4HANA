@@ -14,7 +14,20 @@ we will use mainly to update the data directly to the target like thorugh lookup
 **Example: ** we have material in the source and target  where as target having some other fields like material group, material type and material category.
 while loading the data from source to target we have end routine once material is matching with P material table then it will update the data for material group, material type and material categeory.
 
-Field Level Routine
+**Field Level Routine**: Generally we will write the small peice of code for this like to convert the lower case letters to upper case.
+
+**Scenario**: Populate a "Discount Flag" field only if sales exceed a threshold.
+
+IF SOURCE_FIELDS-SALES > 10000.
+  RESULT = 'Y'.
+ELSE.
+  RESULT = 'N'.
+ENDIF.
+
+
+<img width="762" height="236" alt="image" src="https://github.com/user-attachments/assets/88146989-9cd0-49ae-b9e6-3bce6fe73109" />
+
+
 
 Expert Routine
 
