@@ -5,11 +5,14 @@ SAP BW4HANA Interview questions and answers
 **Start Routine** : it will execute before the transformation. it will execute packet by packet.
 Mainly we will use for to filter or delete unncessary data.
 it will have one internal table i.e SOURCE_PACKAGE
-Example: when we are laoding the data from source system(SAP ECC or S/4HANA) 2 key figures are updating 0 values so business don't want to analyse those records in the report due to we are deleting the records in the start routine itsef.
+**Example:** when we are laoding the data from source system(SAP ECC or S/4HANA) 2 key figures are updating 0 values so business don't want to analyse those records in the report due to we are deleting the records in the start routine itsef.
 
 sample code: DELETE SOURCE_PACKAGE WHERE AMOUNT is inital and QUANITY is initial.
 
-End Routine :
+**End Routine :** It will execute after the transfomration. it will execute packet by packet and it will target structure.
+we will use mainly to update the data directly to the target like thorugh lookup code we will update the data for enhanced fields.
+**Example: ** we have material in the source and target  where as target having some other fields like material group, material type and material category.
+while loading the data from source to target we have end routine once material is matching with P material table then it will update the data for material group, material type and material categeory.
 
 Field Level Routine
 
