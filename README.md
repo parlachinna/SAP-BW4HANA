@@ -16,6 +16,14 @@ while loading the data from source to target we have end routine once material i
 
 **Field Level Routine**: Generally we will write the small peice of code for this like to convert the lower case letters to upper case.
 
+RESULT = TOUPPER( SOURCE_FIELDS-CUSTOMER_NAME ).
+OR
+**Trim Spaces**: RESULT = CONDENSE( SOURCE_FIELDS-MATERIAL ).
+**Replace Special chars:**
+TRANSLATE SOURCE_FIELDS-CITY TO UPPER CASE.
+REPLACE ALL OCCURRENCES OF '-' IN SOURCE_FIELDS-CITY WITH ' '.
+RESULT = SOURCE_FIELDS-CITY.
+
 **Scenario**: Populate a "Discount Flag" field only if sales exceed a threshold.
 
 IF SOURCE_FIELDS-SALES > 10000.
