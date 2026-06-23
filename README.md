@@ -195,11 +195,26 @@ If we want to debug any type of routine in the transformation
 7)Once read statement success then we will get sy-subrc eq 0 then value will updating to enhacned fields.
 
 
+
+
 Remember the points here
+
 F5 means exeute line by line
+
 F6 means it will go inside of method or function module
+
 F7 means it will come out of the method or function module
+
 F8 means it will execute the entire code and it will come out of the program.
+
+
+
+
+
+
+
+
+
 
 
 
