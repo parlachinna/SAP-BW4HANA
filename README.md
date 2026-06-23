@@ -353,8 +353,54 @@ A company wants to analyze Sales Orders vs. Deliveries. Sales data is stored in 
 
 
 
+**Inner Join**
+
+Returns only records that exist in both participating providers.
+
+Example: Sales Orders that have corresponding Deliveries.
 
 
+
+
+**Left Outer Join**
+
+Returns all records from the left provider and matching records from the right provider.
+
+Example: All Sales Orders, even if they don’t have Deliveries yet.
+
+
+
+
+**Right Outer Join**
+
+Returns all records from the right provider and matching records from the left provider.
+
+Example: All Deliveries, even if the Sales Order record is missing in the left provider.
+
+
+
+**Full Outer Join (BW/4HANA specific)**
+
+Returns all records from both providers, with matches where possible.
+
+Example: A reconciliation scenario where you want to see all Sales Orders and all Deliveries, even if they don’t match.
+
+
+
+
+**Scenario:**  
+
+
+You want to analyze Sales Orders vs. Deliveries.
+
+
+If you use an Inner Join, you’ll only see orders that have been delivered.
+
+
+If you use a Left Outer Join, you’ll see all orders, including those pending delivery.
+
+
+If you use a Full Outer Join, you’ll see both unmatched orders and unmatched deliveries, which is useful for reconciliation.
 
 
 
