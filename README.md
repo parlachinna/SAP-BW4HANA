@@ -98,7 +98,40 @@ ENDLOOP.
 RESULT_PACKAGE = lt_result.
 
 
-Variable Customer Exit
+**Variable Customer Exit**: MTD or YTD  Internal table customer exit is E_T_RANGE or C_T_RANGE
+
+**Scenario:**  
+A company wants a query that always shows sales data for the current fiscal year. Instead of asking users to manually select the year, the system should automatically derive it based on today’s date.
+
+CASE i_vnam. "Variable name
+
+  WHEN 'ZCURR_FY'. "Custom variable for current fiscal year
+  
+    DATA: lv_date TYPE sy-datum,
+    
+          lv_year TYPE i.
+
+    lv_date = sy-datum. "System date
+    
+    lv_year = lv_date+0(4). "Extract year
+
+    "Assume fiscal year starts in April
+    
+    IF lv_date+4(2) < '04'.
+    
+      lv_year = lv_year - 1.
+      
+    ENDIF.
+
+    e_t_range-sign   = 'I'.
+    
+    e_t_range-option = 'EQ'.
+    
+    e_t_range-low    = lv_year.
+    
+    APPEND e_t_range.
+    
+ENDCASE.
 
 Data Source Enhancement
 
