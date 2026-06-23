@@ -2,7 +2,7 @@
 SAP BW4HANA Interview questions and answers
 **Must Learn Topic in SAP BW4HANA**:
 
-Start Routine : it will execute before the transformation. it will execute packet by packet.
+**Start Routine** : it will execute before the transformation. it will execute packet by packet.
 Mainly we will use for to filter or delete unncessary data.
 it will have one internal table i.e SOURCE_PACKAGE
 Example: when we are laoding the data from source system(SAP ECC or S/4HANA) 2 key figures are updating 0 values so business don't want to analyse those records in the report due to we are deleting the records in the start routine itsef.
