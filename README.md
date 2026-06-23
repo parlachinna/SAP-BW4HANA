@@ -231,16 +231,27 @@ F8 means it will execute the entire code and it will come out of the program.
 A Customer Exit Variable is used to derive dynamic values at runtime in BW reports using ABAP code.
 
 Real-Time Business Scenarios
+
 1. MTD – Month-To-Date
+
 Requirement:
+
 Business wants:
+
 1st day of current month → Till today
+
 Example:
+
 If today is 20.04.2026
+
 Then range should be 20260401 → 20260420
+
 Declaration:
+
 DATA: v_date TYPE d.
+
 V_DATE TYPE SY-DATUM.
+
 v_date = sy-datum.
 
 
