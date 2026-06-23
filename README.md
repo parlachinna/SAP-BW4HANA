@@ -138,40 +138,40 @@ ENDCASE.
 **Business Scenario**:
 A company wants to report on Sales Orders in BW. The standard extractor (2LIS_11_VAHDR) provides header-level fields, but the business also needs a custom field (e.g., “Order Priority”) that isn’t available in the delivered DataSource.
 
-1
-Identify the DataSource
+1.
+**Identify the DataSource**
 Choose the standard extractor closest to your requirement.
 
 Example: 2LIS_11_VAHDR for sales order header
 
 Check if the required field exists in standard delivery
 
-2
-Enhance the DataSource
+2.
+**Enhance the DataSource**
 Add custom fields to the extractor structure in S/4HANA.
 
 Use transaction RSA6 or LBWE depending on extractor type
 
 Append the custom field (e.g., Order Priority) to the DataSource structure
 
-3
-Write the Enhancement Logic
+3.
+**Write the Enhancement Logic**
 Populate the custom field using ABAP code.
 
 Implement logic in CMOD project (function exit EXIT_SAPLRSAP_001)
 
 Example: fetch Order Priority from VBAK table and assign to the appended field
 
-4
-Activate and Replicate
+4.
+**Activate and Replicate**
 Make the enhanced DataSource available to BW.
 
 Activate the DataSource in S/4HANA
 
 Replicate it in BW using RSA1
 
-5
-Adjust BW Data Flow
+5.
+**Adjust BW Data Flow**
 Update BW transformations to include the new field.
 
 Map the new field in Transformation
@@ -180,8 +180,8 @@ Update DSO/Cube to store the field
 
 Test extraction with sample data
 
-6
-Validate and Transport
+6.
+**Validate and Transport**
 Ensure correctness and move changes to production.
 
 Run delta/full loads to check data
