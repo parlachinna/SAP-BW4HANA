@@ -98,7 +98,7 @@ ENDLOOP.
 RESULT_PACKAGE = lt_result.
 
 
-**Variable Customer Exit**: MTD or YTD  Internal table customer exit is E_T_RANGE or C_T_RANGE
+**Variable Customer Exit**: MTD or YTD  Internal table customer exit is E_T_RANGE(New systems) or C_T_RANGE(old systems)
 
 **Scenario:**  
 A company wants a query that always shows sales data for the current fiscal year. Instead of asking users to manually select the year, the system should automatically derive it based on today’s date.
