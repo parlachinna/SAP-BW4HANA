@@ -194,6 +194,7 @@ If we want to debug any type of routine in the transformation
 6)carefully check the internal table filling or not in the select statement level
 7)Once read statement success then we will get sy-subrc eq 0 then value will updating to enhacned fields.
 
+
 Remember the points here
 F5 means exeute line by line
 F6 means it will go inside of method or function module
@@ -208,4 +209,4 @@ F8 means it will execute the entire code and it will come out of the program.
 
 
 
-<img width="198" height="141" alt="image" src="https://github.com/user-attachments/assets/939c91f8-8e17-4728-a2e4-5fb8ed778cf5" />
+
