@@ -317,6 +317,36 @@ I_STEP = 3: Error Handling
 
 
 
+**Composite Provider(CP): **
+
+CP is a virtual object and it won't store data physically.
+
+we can perform 2 operations by using CP like union and joins
+
+we can create CP based on the below projects like
+
+Info Object,
+
+ADSO,
+
+CP,
+
+Aggregation Level,
+
+Calculation View
+
+Open ODS View
+
+It will support multiple joins like Inner join, left outer join, Right outer join, Full outer join, Referential intergrity and Temporal Join( from date and To date)
+
+
+
+**Business Scenario**
+
+Scenario: 
+
+A company wants to analyze Sales Orders vs. Deliveries. Sales data is stored in one ADSO, and Delivery data is stored in another ADSO. The business needs a single reporting view to compare ordered quantities with delivered quantities.
+
 
 
 
